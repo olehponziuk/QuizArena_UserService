@@ -1,0 +1,107 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "UsersService.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "UsersService.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UsersService.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UsersService.Application.dll": {}
+        }
+      },
+      "UsersService.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UsersService.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UsersService.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UsersService.Application/1.0.0": {
+      "type": "project",
+      "path": "../UsersService.Application/UsersService.Application.csproj",
+      "msbuildProject": "../UsersService.Application/UsersService.Application.csproj"
+    },
+    "UsersService.Domain/1.0.0": {
+      "type": "project",
+      "path": "../UsersService.Domain/UsersService.Domain.csproj",
+      "msbuildProject": "../UsersService.Domain/UsersService.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "UsersService.Application >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/oleh/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/oleh/RiderProjects/Quiz_Microservices/UsersService/UsersService.Infrastructure/UsersService.Infrastructure.csproj",
+      "projectName": "UsersService.Infrastructure",
+      "projectPath": "/Users/oleh/RiderProjects/Quiz_Microservices/UsersService/UsersService.Infrastructure/UsersService.Infrastructure.csproj",
+      "packagesPath": "/Users/oleh/.nuget/packages/",
+      "outputPath": "/Users/oleh/RiderProjects/Quiz_Microservices/UsersService/UsersService.Infrastructure/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/oleh/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "/Users/oleh/RiderProjects/Quiz_Microservices/UsersService/UsersService.Application/UsersService.Application.csproj": {
+              "projectPath": "/Users/oleh/RiderProjects/Quiz_Microservices/UsersService/UsersService.Application/UsersService.Application.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
