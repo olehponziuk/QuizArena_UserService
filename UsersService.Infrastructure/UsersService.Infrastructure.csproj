@@ -10,4 +10,8 @@
       <ProjectReference Include="..\UsersService.Application\UsersService.Application.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Presistance\Migrations\" />
+    </ItemGroup>
+
 </Project>
