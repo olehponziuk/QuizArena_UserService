@@ -6,8 +6,33 @@ namespace UsersService.Infrastructure.Presistance.Configurations;
 
 public class UserConfiguration : IEntityTypeConfiguration<User>
 {
-    public void Configure(EntityTypeBuilder<User> u)
+    public void Configure(EntityTypeBuilder<User> builder)
     {
+        builder.HasKey(u => u.Id);
+
+        builder.Property(u => u.UserName)
+            .IsRequired()
+            .HasMaxLength(30);
+
+        builder.OwnsOne(u => u.Email, b =>
+            {
+                b.Property(e => e.Value)
+                    .HasColumnName("Email")
+                    .IsRequired();
+
+                b.HasIndex(e => e.Value).IsUnique();
+            }
+        );
+
+        builder.Property(u => u.PassHash)
+            .IsRequired();
+
+        builder.HasOne(u => u.Rank)
+            .WithOne(r => r.User)
+            .HasForeignKey<User>(u => u.RankId)
+            .OnDelete(DeleteBehavior.Cascade);
+
         
+
     }
 }

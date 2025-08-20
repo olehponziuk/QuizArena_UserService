@@ -12,8 +12,6 @@ public class User
     public Rank Rank { get; private set; }
     public Guid RankId { get; private set; }
     public UserImage UserImage { get; private set; }
-    public Guid ImageId { get; private set; }
-
     public IReadOnlyCollection<Friendship> Friendships => _friendships.AsReadOnly();
     private readonly List<Friendship> _friendships = new();
 

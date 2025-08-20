@@ -5,6 +5,9 @@ public class UserImage
     public Guid Id { get; private set; }
     public string Url { get; private set; }
     
+    public Guid UserId { get; private set; }
+    public User User { get; private set; }
+    
     private UserImage() {}
 
     public UserImage(string url)
