@@ -26,13 +26,6 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.Property(u => u.PassHash)
             .IsRequired();
-
-        builder.HasOne(u => u.Rank)
-            .WithOne(r => r.User)
-            .HasForeignKey<User>(u => u.RankId)
-            .OnDelete(DeleteBehavior.Cascade);
-
         
-
     }
 }

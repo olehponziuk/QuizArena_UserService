@@ -6,6 +6,7 @@ public class Rank
     public int Value { get; private set; } = 1000;
     
     public User User { get; private set; }
+    public Guid UserId { get; private set; }
     
     private Rank(){}
     
