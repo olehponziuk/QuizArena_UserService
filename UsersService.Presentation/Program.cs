@@ -8,6 +8,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IAppDbContext>(provider => provider.GetRequiredService<AppDbContext>());
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();

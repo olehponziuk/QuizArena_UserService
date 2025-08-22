@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "PvX9rJS/tTJE8y5Stk5nNQAVJDEHJlGIMpMHKvWGosGT9vqSGeQYE6QF00RipP58Q4JU4qHCk5gxxjfT+3uCQA==",
+  "dgSpecHash": "r4D8CoY8pQNqViMWPTrtlTTW3Z73Xitp0Ea6tttZZ7n7NmQlfWiRVNZn52sf8GUtMPgZ0CIqbc3h6N1vgdxNKA==",
   "success": true,
   "projectFilePath": "/Users/oleh/RiderProjects/Quiz_Microservices/UsersService/UsersService.Infrastructure/UsersService.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "/Users/oleh/.nuget/packages/microsoft.aspnetcore.http/2.3.0/microsoft.aspnetcore.http.2.3.0.nupkg.sha512",
+    "/Users/oleh/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.3.0/microsoft.aspnetcore.http.abstractions.2.3.0.nupkg.sha512",
+    "/Users/oleh/.nuget/packages/microsoft.aspnetcore.http.features/2.3.0/microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",
+    "/Users/oleh/.nuget/packages/microsoft.aspnetcore.webutilities/2.3.0/microsoft.aspnetcore.webutilities.2.3.0.nupkg.sha512",
     "/Users/oleh/.nuget/packages/microsoft.entityframeworkcore/9.0.8/microsoft.entityframeworkcore.9.0.8.nupkg.sha512",
     "/Users/oleh/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.8/microsoft.entityframeworkcore.abstractions.9.0.8.nupkg.sha512",
     "/Users/oleh/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.8/microsoft.entityframeworkcore.analyzers.9.0.8.nupkg.sha512",
@@ -15,11 +19,15 @@
     "/Users/oleh/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.8/microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512",
     "/Users/oleh/.nuget/packages/microsoft.extensions.logging/9.0.8/microsoft.extensions.logging.9.0.8.nupkg.sha512",
     "/Users/oleh/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.8/microsoft.extensions.logging.abstractions.9.0.8.nupkg.sha512",
+    "/Users/oleh/.nuget/packages/microsoft.extensions.objectpool/8.0.11/microsoft.extensions.objectpool.8.0.11.nupkg.sha512",
     "/Users/oleh/.nuget/packages/microsoft.extensions.options/9.0.8/microsoft.extensions.options.9.0.8.nupkg.sha512",
     "/Users/oleh/.nuget/packages/microsoft.extensions.primitives/9.0.8/microsoft.extensions.primitives.9.0.8.nupkg.sha512",
+    "/Users/oleh/.nuget/packages/microsoft.net.http.headers/2.3.0/microsoft.net.http.headers.2.3.0.nupkg.sha512",
     "/Users/oleh/.nuget/packages/npgsql/9.0.3/npgsql.9.0.3.nupkg.sha512",
     "/Users/oleh/.nuget/packages/npgsql.entityframeworkcore.postgresql/9.0.4/npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512",
-    "/Users/oleh/.nuget/packages/system.diagnostics.diagnosticsource/9.0.8/system.diagnostics.diagnosticsource.9.0.8.nupkg.sha512"
+    "/Users/oleh/.nuget/packages/system.buffers/4.6.0/system.buffers.4.6.0.nupkg.sha512",
+    "/Users/oleh/.nuget/packages/system.diagnostics.diagnosticsource/9.0.8/system.diagnostics.diagnosticsource.9.0.8.nupkg.sha512",
+    "/Users/oleh/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }
