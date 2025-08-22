@@ -21,7 +21,7 @@ public class Friendship
     public Friendship(DateTime createdAt, Guid requesterId, Guid addresseeId)
     {
         Id = Guid.NewGuid();
-        CreatedAt = DateTime.UtcNow;
+        //CreatedAt = DateTime.UtcNow;
         RequesterId = requesterId;
         AddresseeId = addresseeId;
         Status = FriendStatus.Pending;

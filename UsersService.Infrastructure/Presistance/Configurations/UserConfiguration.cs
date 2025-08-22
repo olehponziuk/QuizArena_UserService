@@ -12,7 +12,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.Property(u => u.UserName)
             .IsRequired()
-            .HasMaxLength(30);
+            .HasMaxLength(45);
 
         builder.OwnsOne(u => u.Email, b =>
             {
@@ -27,5 +27,13 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(u => u.PassHash)
             .IsRequired();
         
+        builder.Navigation(x => x.RequesterShip)
+            .UsePropertyAccessMode(PropertyAccessMode.Field);
+
+        builder.Navigation(x => x.AddresseeShip)
+            .UsePropertyAccessMode(PropertyAccessMode.Field);
+
+        builder.Ignore(u => u.Friendships);
+
     }
 }

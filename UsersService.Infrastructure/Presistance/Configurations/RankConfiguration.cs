@@ -10,6 +10,9 @@ public class RankConfiguration : IEntityTypeConfiguration<Rank>
     {
         builder.HasKey(r => r.Id);
 
+        builder.Property(r => r.Value)
+            .HasDefaultValue(1000);
+
         builder.HasOne(r => r.User)
             .WithOne(u => u.Rank)
             .HasForeignKey<Rank>(r => r.UserId)

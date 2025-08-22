@@ -11,8 +11,13 @@ public class User
 
     public Rank Rank { get; private set; }
     public UserImage UserImage { get; private set; }
-    public IReadOnlyCollection<Friendship> Friendships => _friendships.AsReadOnly();
-    private readonly List<Friendship> _friendships = new();
+
+    private readonly List<Friendship> _requesterShip = new();
+    public IReadOnlyCollection<Friendship> RequesterShip => _requesterShip.AsReadOnly();
+
+    private readonly List<Friendship> _addresseeShip = new();
+    public IReadOnlyCollection<Friendship> AddresseeShip => _addresseeShip.AsReadOnly();
+    public IEnumerable<Friendship> Friendships => _requesterShip.Concat(_addresseeShip);
 
     private User() { }
 

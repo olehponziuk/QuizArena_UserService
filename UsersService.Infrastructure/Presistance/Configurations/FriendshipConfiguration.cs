@@ -29,8 +29,16 @@ public class FriendshipConfiguration : IEntityTypeConfiguration<Friendship>
             .HasConversion<string>()
             .HasDefaultValue(FriendStatus.Pending)
             .IsRequired();
+
+        builder.HasOne(f => f.Requester)
+            .WithMany(nameof(User.RequesterShip))
+            .HasForeignKey(f => f.RequesterId)
+            .OnDelete(DeleteBehavior.Cascade);
         
-        builder.HasOne(f=> f.RequesterId)
-            .WithMany(=> u.)
+        builder.HasOne(f => f.Addressee)
+            .WithMany(nameof(User.AddresseeShip))
+            .HasForeignKey(f => f.AddresseeId)
+            .OnDelete(DeleteBehavior.Cascade);
+        
     }
 }
