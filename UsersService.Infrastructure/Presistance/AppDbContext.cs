@@ -1,9 +1,10 @@
 using Microsoft.EntityFrameworkCore;
+using UsersService.Application.Abstractions;
 using UsersService.Domain.Entities;
 
 namespace UsersService.Infrastructure.Presistance;
 
-public class AppDbContext : DbContext
+public class AppDbContext : DbContext, IAppDbContext
 {
     public DbSet<User> Users { get; set; }
     public DbSet<UserImage> UserImages { get; set; }
