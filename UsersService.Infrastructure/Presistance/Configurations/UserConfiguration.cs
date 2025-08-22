@@ -24,8 +24,8 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             }
         );
 
-        builder.Property(u => u.PassHash)
-            .IsRequired();
+        builder.HasIndex(u => u.SubjectId)
+            .IsUnique();
         
         builder.Navigation(x => x.RequesterShip)
             .UsePropertyAccessMode(PropertyAccessMode.Field);

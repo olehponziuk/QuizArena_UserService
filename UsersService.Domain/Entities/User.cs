@@ -7,7 +7,8 @@ public class User
     public Guid Id { get; private set; }
     public string UserName { get; private set; }
     public Email Email { get; private set; }
-    public string? PassHash { get; private set; }
+    //public string? PassHash { get; private set; }
+    public string SubjectId { get;private set; }
 
     public Rank Rank { get; private set; }
     public UserImage UserImage { get; private set; }
@@ -21,12 +22,16 @@ public class User
 
     private User() { }
 
-    public User(string userName, Email email, string passHash, Rank rank, UserImage image)
+    public User(string userName, Email email, string subId, Rank rank, UserImage image)
     {
+        if (string.IsNullOrWhiteSpace(subId)) throw new ArgumentException("SubjectId required", nameof(subId));
+        SubjectId = subId.Trim();
+        
         Id = Guid.NewGuid();
         SetUserName(userName);
         SetEmail(email);
-        PassHash = passHash ?? throw new ArgumentNullException(nameof(passHash));
+        //PassHash = passHash ?? throw new ArgumentNullException(nameof(passHash));
+        SubjectId = subId;
         Rank = rank ?? throw new ArgumentNullException(nameof(rank));
         UserImage = image ?? throw new ArgumentNullException(nameof(image));
     }
@@ -44,13 +49,13 @@ public class User
         Email = email ?? throw new ArgumentNullException(nameof(email));
     }
 
-    public void ChangePassword(string newPassHash)
+    /*public void ChangePassword(string newPassHash)
     {
         if (string.IsNullOrWhiteSpace(newPassHash))
             throw new ArgumentException("Password hash cannot be empty", nameof(newPassHash));
 
         PassHash = newPassHash;
-    }
+    }*/
 
     public void ChangeRank(Rank rank)
     {
