@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using UsersService.Application.Abstractions;
+using UsersService.Infrastructure.Identity;
 using UsersService.Infrastructure.Presistance;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<IAppDbContext>(provider => provider.GetRequiredService<AppDbContext>());
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ICurrentUser, CurrentUser>();
 
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
