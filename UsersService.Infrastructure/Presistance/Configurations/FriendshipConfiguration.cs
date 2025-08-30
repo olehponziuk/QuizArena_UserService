@@ -15,7 +15,7 @@ public class FriendshipConfiguration : IEntityTypeConfiguration<Friendship>
             .IsUnique();
 
         builder.HasCheckConstraint("chk_self_friendship", 
-            "requester_id <> addressee_id");
+            "\"RequesterId\" <> \"AddresseeId\"");
 
         builder.Property(f => f.CreatedAt)
             .HasColumnType("timestamptz")

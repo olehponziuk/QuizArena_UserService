@@ -8,14 +8,19 @@ public class Rank
     public User User { get; private set; }
     public Guid UserId { get; private set; }
     
-    private Rank(){}
+    
+
+    public Rank()
+    {
+        Id = Guid.NewGuid();
+    }
     
     public void ChangeRank(int sum)
     {
         if (Value < -sum)
             Value = 0;
-
-        Value += sum;
+        else
+            Value += sum;
     }
     
 }

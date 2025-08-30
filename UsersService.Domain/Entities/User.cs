@@ -11,7 +11,7 @@ public class User
     public string SubjectId { get;private set; }
 
     public Rank Rank { get; private set; }
-    public UserImage UserImage { get; private set; }
+    public UserImage? UserImage { get; private set; }
 
     private readonly List<Friendship> _requesterShip = new();
     public IReadOnlyCollection<Friendship> RequesterShip => _requesterShip.AsReadOnly();
@@ -22,7 +22,7 @@ public class User
 
     private User() { }
 
-    public User(string userName, Email email, string subId, Rank rank, UserImage image)
+    public User(string userName, Email email, string subId, Rank rank , UserImage image = null)
     {
         if (string.IsNullOrWhiteSpace(subId)) throw new ArgumentException("SubjectId required", nameof(subId));
         SubjectId = subId.Trim();
@@ -31,7 +31,6 @@ public class User
         SetUserName(userName);
         SetEmail(email);
         //PassHash = passHash ?? throw new ArgumentNullException(nameof(passHash));
-        SubjectId = subId;
         Rank = rank ?? throw new ArgumentNullException(nameof(rank));
         UserImage = image ?? throw new ArgumentNullException(nameof(image));
     }
